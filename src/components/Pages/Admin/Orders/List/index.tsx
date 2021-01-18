@@ -10,7 +10,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Toolbar from 'components/Layout/Toolbar';
 import CardLoader from 'components/Shared/CardLoader';
 import EmptyAndErrorMessages from 'components/Shared/Pagination/EmptyAndErrorMessages';
-import SearchField from 'components/Shared/Pagination/SearchField';
 import TableCellActions from 'components/Shared/Pagination/TableCellActions';
 import TableCellSortable from 'components/Shared/Pagination/TableCellSortable';
 import TablePagination from 'components/Shared/Pagination/TablePagination';
@@ -68,10 +67,6 @@ const UserListPage = memo(() => {
 
         <CardContent>
           <Grid container justify='space-between' alignItems='center' spacing={2}>
-            <Grid item xs={12} sm={6} lg={4}>
-              <SearchField paginationParams={params} onChange={mergeParams} />
-            </Grid>
-
             <Grid item xs={12} sm={'auto'}>
               <Button fullWidth variant='contained' color='primary' onClick={handleCreate}>
                 Adicionar
