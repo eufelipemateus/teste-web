@@ -30,7 +30,7 @@ const UserListPage = memo(() => {
 
   const [params, mergeParams, loading, data, error, , refresh] = usePaginationObservable(
     params => orderService.list(params),
-    { orderBy: 'qtd', orderDirection: 'asc' },
+    { orderBy: 'id', orderDirection: 'asc' },
     []
   );
 
