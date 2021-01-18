@@ -2,7 +2,6 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Drawer from 'components/Layout/Drawer';
 import AccountMultipleIcon from 'mdi-react/AccountMultipleIcon';
 import OrderNumericDescendingIcon from 'mdi-react/OrderNumericDescendingIcon';
-import StarIcon from 'mdi-react/StarIcon';
 import ViewDashboardIcon from 'mdi-react/ViewDashboardIcon';
 import React, { memo, useCallback, useRef, useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
@@ -50,8 +49,7 @@ const AdminPage = memo((props: {}) => {
       display: 'Pedidos',
       // role: enRoles.admin,
       icon: OrderNumericDescendingIcon
-    },
-    { path: '/exemplos', display: 'Exemplos', icon: StarIcon }
+    }
   ]);
 
   const scrollTop = useCallback(() => setTimeout(() => mainContent.current.scrollTo(0, 0), 100), []);
