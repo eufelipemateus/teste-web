@@ -2,10 +2,12 @@ version: '3'
 services:
 
   web:
-    container_name: %PROJECT-SLUG%
-   build: docker/dev
+    container_name: web-test
+    build: docker/prod
     ports:
       - "3000:3000"
       - "35729:35729"
+    env_file:
+      - .env
     volumes:
       - .:/src
